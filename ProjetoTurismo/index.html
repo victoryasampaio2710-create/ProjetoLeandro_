@@ -1,50 +1,100 @@
 <!DOCTYPE html>
- <html lang="pt-BR">
-  <head>
-   <meta charset="UTF-8">
-   <title>JP Acontece</title>
-   <link rel="stylesheet" href="style.css">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Acontece</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-     <header>
-        <h1>JP Acontece</h1>
-        <p>João Pessoa: história, turismo e cultura</p>
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#turismo">Pontos turísticos</a>
-        <a href="#cultura">Cultura e eventos</a>
-    </nav>
-</header>
+    <header>
+        <div class="container">
+            <h1>JP Acontece</h1>
+            <p>João Pessoa: história, turismo e cultura</p>
 
- 
-   <article class="cartao">
-        <img src="view/Orla_CABOBRANCO.jpeg"
-        alt="Orla_CABO_BRANCO">
-        <h3>Estação Cabo Branco</h3>
-        <p>Cabo Branco é uma praia urbana brasileira de João Pessoa, capital do estado da Paraíba. De areia fina e batida, a praia apresenta ainda 
-        coqueiros e «falésias vivas»,denominação dada pela ação dos fenômenos naturais que atuam nas falésias de até 40 metros.</p>
-  </article>
- </div>
-</section>
+            <nav aria-label="Menu principal">
+                <a href="#inicio">Início</a>
+                <a href="#turismo">Pontos turísticos</a>
+                <a href="#cultura">Cultura e eventos</a>
+            </nav>
+        </div>
+    </header>
 
-    <section id="cultura">
-        <h2>Cultura e eventos</h2>
-        <div class="evento">
-        <img src="view/evento-cultural.jpg"
-        alt="Apresentação musical em evento cultural">
-            <div>
-              <h3>O que acontece na cidade?</h3>
-              <p>Consulte a programação de shows, festas populares,exposições e atividades culturais: </p>
-              <p>Antes de divulgar um evento, confirme a data,
-               o horário, o local e a informação em uma fonte confiável.</p>
-              </div>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <div class="hero-texto">
+                    <span>Descubra a capital da alegria</span>
+                    <h2>João Pessoa é cultura, praia e identidade.</h2>
+                    <p>
+                        Conheça os melhores lugares para visitar, os eventos da cidade e
+                        a atmosfera acolhedora que torna João Pessoa uma das capitais mais
+                        bonitas do Brasil.
+                    </p>
+                    <a href="#turismo" class="botao">Veja os pontos turísticos</a>
+                </div>
+                <img src="./jpg/OrlaCaboBranco.jpg" alt="Orla de Cabo Branco em João Pessoa">
             </div>
-             </section>
-          </main>    
-         <footer>        
-            <p>JP Acontece — João Pessoa tem história e cultura.</p>        
-            
-        </footer> 
-    </body>
+        </section>
+
+        <section id="turismo">
+            <div class="container">
+                <h2>Pontos turísticos</h2>
+                <div class="cards">
+                    <article class="cartao">
+                        <img src="./jpg/EstacaoCaboBranco.jpg" alt="Estação Cabo Branco">
+                        <h3>Estação Cabo Branco</h3>
+                        <p>
+                            Um dos símbolos mais reconhecidos da cidade, com vista panorâmica para o
+                            mar, arquitetura marcante e ambiente perfeito para passeios e fotos.
+                        </p>
+                    </article>
+
+                    <article class="cartao">
+                        <img src="./jpg/VistaOrla.jpeg" alt="Vista da orla de João Pessoa">
+                        <h3>Orla de João Pessoa</h3>
+                        <p>
+                            A orla é um dos cartões-postais da capital paraibana, com praias, calçadas,
+                            coqueiros e uma paisagem que encanta moradores e visitantes.
+                        </p>
+                    </article>
+
+                    <article class="cartao">
+                        <img src="./jpg/HotelGlobo.jpg" alt="Hotel Globo em João Pessoa">
+                        <h3>Centro Histórico</h3>
+                        <p>
+                            A cidade guarda história em seus casarões, ruas tradicionais e pontos de
+                            encontro cultural que revelam a essência da capital paraibana.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultura" class="cultura">
+            <div class="container cultura-content">
+                <img src="./jpg/EventoCultural.jpg" alt="Evento cultural em João Pessoa">
+                <div class="cultura-texto">
+                    <h2>Cultura e eventos</h2>
+                    <h3>O que acontece na cidade?</h3>
+                    <p>
+                        Confira a programação de shows, festas populares, exposições e atividades
+                        culturais que animam a capital ao longo do ano.
+                    </p>
+                    <p>
+                        Antes de divulgar um evento, confirme data, horário, local e informações em
+                        fontes confiáveis para garantir a atualização da programação.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>JP Acontece — João Pessoa tem história e cultura.</p>
+        </div>
+    </footer>
+</body>
 </html>
+
