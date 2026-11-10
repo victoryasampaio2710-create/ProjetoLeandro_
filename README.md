@@ -6,12 +6,12 @@ Objetivos
 - Apresentar pontos turísticos.
 - Valorizar a história da cidade.
 - Divulgar eventos culturais.
-- 
+  
 Tecnologias utilizadas
 - HTML5
-- CSS3
-- 
+- CSS
+  
 Estrutura do projeto
 - index.html
 - style.css
-- imagens/
+- imagens
