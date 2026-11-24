@@ -1,0 +1,122 @@
+:root {
+  --primary: #0c5a73;
+  --primary-dark: #083f52;
+  --accent: #e9a23b;
+  --sand: #f7f1df;
+  --paper: #fffdf8;
+  --text: #263238;
+  --muted: #607780;
+  --line: #dfe8ea;
+  --radius: 18px;
+  --shadow: 0 14px 35px rgba(8, 63, 82, 0.12);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text);
+  background: #f4f8f8;
+  line-height: 1.65;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--primary); }
+
+.container { width: min(1120px, 92%); margin-inline: auto; }
+
+.site-header {
+  background: var(--primary-dark);
+  color: white;
+  padding: 18px 0;
+  border-bottom: 4px solid var(--accent);
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { color: white; text-decoration: none; }
+.brand h1 { margin: 0; font-size: 1.7rem; }
+.brand p { margin: 2px 0 0; opacity: .85; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+nav a:hover, nav a:focus-visible { background: rgba(255,255,255,.12); }
+
+main section { padding: 72px 0; }
+section:nth-of-type(even) { background: white; }
+.hero {
+  background: linear-gradient(135deg, #e5f4f6 0%, var(--sand) 100%);
+  overflow: hidden;
+}
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; }
+.hero h2 { color: var(--primary-dark); font-size: clamp(2.3rem, 6vw, 4.8rem); line-height: 1.05; margin: 10px 0 20px; }
+.hero p { max-width: 600px; font-size: 1.08rem; }
+.hero img { height: 430px; width: 100%; object-fit: cover; border-radius: 26px; box-shadow: var(--shadow); }
+.eyebrow { color: #b8791e; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: #3d2a10;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 999px;
+  margin-top: 10px;
+}
+
+.section-heading { max-width: 700px; margin-bottom: 28px; }
+.section-heading h2 { color: var(--primary-dark); font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 8px; }
+.section-heading p { color: var(--muted); margin: 0; }
+.cards, .zone-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.card, .zone-card, .evento {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 22px rgba(8,63,82,.07);
+  overflow: hidden;
+}
+.card img, .zone-card img { height: 220px; width: 100%; object-fit: cover; }
+.card-body, .zone-card-body, .card-content { padding: 20px; }
+.card h3, .zone-card h3, .evento h4 { color: var(--primary-dark); margin: 0 0 8px; }
+.card p, .zone-card p { color: var(--muted); }
+.zone-card ul { padding-left: 18px; }
+.zone-card h4 { color: var(--primary); margin: 18px 0 8px; }
+.zone-card .button { margin-top: 16px; }
+
+.region-hero, #apresentacao {
+  background: linear-gradient(135deg, #e5f4f6, var(--sand));
+  padding: 56px 0;
+}
+.region-hero .container, #apresentacao { width: min(1120px, 92%); margin-inline: auto; }
+.region-hero img, #apresentacao img { width: 100%; height: 430px; object-fit: cover; border-radius: var(--radius); margin-bottom: 24px; }
+.region-hero h2, #apresentacao h2 { color: var(--primary-dark); font-size: clamp(2.2rem, 5vw, 4rem); margin: 0 0 12px; }
+
+main > section:not(.hero):not(.region-hero):not(#apresentacao), main #bairros, main #turismo, main #eventos {
+  width: 100%;
+  padding-left: max(4%, calc((100% - 1120px)/2));
+  padding-right: max(4%, calc((100% - 1120px)/2));
+}
+#bairros ul, #turismo ul, #eventos ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 24px; }
+li::marker { color: var(--accent); }
+.evento-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.evento { padding: 20px; }
+.evento a { font-weight: 800; }
+
+.site-footer, footer { background: var(--primary-dark); color: white; text-align: center; padding: 28px 0; }
+footer a { color: white; }
+
+@media (max-width: 860px) {
+  .site-header .container, .hero-grid { grid-template-columns: 1fr; display: grid; }
+  .site-header .container { justify-items: center; text-align: center; }
+  .cards, .zone-grid { grid-template-columns: 1fr 1fr; }
+  .hero img { height: 330px; }
+}
+@media (max-width: 560px) {
+  main section { padding: 48px 0; }
+  .cards, .zone-grid, .evento-grid, #bairros ul, #turismo ul, #eventos ul { grid-template-columns: 1fr; }
+  .hero img, .region-hero img, #apresentacao img { height: 250px; }
+  nav { justify-content: center; }
+}
